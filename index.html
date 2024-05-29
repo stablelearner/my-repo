@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Provider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Sols</div>
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Solution Provider</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="contactForm" >
+            <h2>Solution Provider</h2>
+            <label for="fullName">Full Name<span class="star">*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Mail ID<span class="star">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject<span class="star">*</span></label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="socialMedia">Social Media Platform ID<span class="star">*</span> (Telegram Id / Whatsapp No)</label>
+            <input type="text" id="socialMedia" name="socialMedia" required>
+
+            <label for="problem">Problem Statement<span class="star">*</span></label>
+            <textarea id="problem" name="problem" required></textarea>
+
+            <label for="fileUpload">Attach Images<span class="star">*</span></label>
+            <input type="file" id="fileUpload" name="fileUpload" accept="image/*" multiple>
+
+            <label for="priceRange">Price ($)<span class="star">*</span></label>
+            <input type="range" id="priceRange" name="priceRange" min="1" max="100" value="50" oninput="updatePriceLabel(this.value)">
+            <label for="price">Price : <span id="priceValue">50 </span></label>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+            <span id="progressText">0%</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">Solution provider</div>
+        <div class="footer-right">© 2024 Pansols. All rights reserved.</div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
